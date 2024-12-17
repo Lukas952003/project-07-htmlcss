@@ -163,10 +163,19 @@ li {
   right: 20%;
 }
 .hero .hero__content .hero__title {
+  position: relative;
   font-size: 7rem;
   font-weight: 700;
   line-height: 1.2;
   width: 470px;
+  z-index: 1;
+}
+.hero .hero__content .hero__title::after {
+  content: url(../img/hero-line.svg);
+  position: absolute;
+  top: 45%;
+  left: 20px;
+  z-index: -1;
 }
 .hero .hero__content .hero__text {
   margin-top: 20px;
