@@ -1,0 +1,214 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+// Variable
+$primaryColor: #936cdd;
+$secondaryColor: #fff8f3;
+$thirdCorlor: #ff9051;
+
+// Common
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+}
+// mixins
+// Mixins button
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 157px;
+  height: 64px;
+  border-radius: 8px;
+  background: $primaryColor;
+}
+
+// mixins heading
+@mixin colorHeading {
+  color: #201830;
+}
+
+@mixin heading-1 {
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@mixin heading-2 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@mixin heading-3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+// mixins desc
+@mixin desc {
+  color: #665f73;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+// mixins time
+@mixin time {
+  color: #fd6f1f;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+// mixins button small
+@mixin btn-small {
+  @include time;
+  color: #201830;
+  font-weight: 600;
+}
+
+// mixins icon
+@mixin icon {
+  width: 36px;
+  height: 36px;
+}
+
+// Mixins center
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// main CSS
+.header {
+  padding-top: 42px;
+  background-color: #fff8f3;
+  height: 100vh;
+
+  .header__list,
+  .header__button,
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__list {
+    @include desc;
+    gap: 48px;
+    a {
+      color: #665f73;
+    }
+  }
+
+  .header__button-signup {
+    width: 116px;
+    height: 48px;
+    @include flexCenter;
+    border-radius: 6px;
+    background: #201830;
+  }
+
+  .header__button-login {
+    margin-right: 28px;
+    a {
+      color: #201830;
+      font-weight: 600;
+    }
+  }
+}
+
+// Hero
+.hero {
+  .hero__left,
+  .hero__right {
+    position: relative;
+    margin-top: 121px;
+  }
+
+  .hero__decor-music {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    opacity: 0.7;
+  }
+  .hero__listener {
+    @include flexCenter;
+    justify-content: flex-start;
+  }
+
+  .hero__listener-img {
+    margin-left: -20px;
+  }
+
+  .hero__podcast {
+    margin-top: 53px;
+  }
+
+  .hero__listener-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    border: 2px solid #fff;
+  }
+
+  .hero__podcast-heading {
+    color: #201830;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  .hero__listner-add {
+    @include flexCenter;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #201830;
+    margin-left: -20px;
+    border: 2px solid #fff;
+  }
+
+  .hero__podcast-desc {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  .hero__right {
+    .img-decor-02 {
+      margin-top: 50%;
+    }
+
+    .hero__right-social {
+      @include flexCenter;
+      gap: 18px;
+      justify-content: flex-start;
+    }
+    .hero__right-podcast {
+      @include flexCenter;
+      background-color: $thirdCorlor;
+      width: 82px;
+      height: 82px;
+      flex-direction: column;
+      border-radius: 50%;
+    }
+  }
+}
