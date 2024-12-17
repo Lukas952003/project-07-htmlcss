@@ -100,7 +100,7 @@ li {
 .header {
   padding-top: 42px;
   background-color: #fff8f3;
-  height: 100vh;
+  // height: 100vh;
 
   .header__list,
   .header__button,
@@ -138,7 +138,8 @@ li {
 // Hero
 .hero {
   .hero__left,
-  .hero__right {
+  .hero__right,
+  .hero__content {
     position: relative;
     margin-top: 121px;
   }
@@ -193,22 +194,99 @@ li {
   }
 
   .hero__right {
+    position: relative;
     .img-decor-02 {
       margin-top: 50%;
     }
 
     .hero__right-social {
       @include flexCenter;
+      position: absolute;
+      top: 20%;
+      left: 0;
       gap: 18px;
       justify-content: flex-start;
     }
+
     .hero__right-podcast {
       @include flexCenter;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 30%;
       background-color: $thirdCorlor;
       width: 82px;
       height: 82px;
-      flex-direction: column;
       border-radius: 50%;
+    }
+    strong {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    p {
+      margin-top: 4px;
+      color: #ffefe7;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .hero__right-decor-line-1 {
+      position: absolute;
+      top: 8%;
+      left: 20%;
+    }
+
+    .hero__right-decor-line-2 {
+      position: absolute;
+      top: 20%;
+      right: 20%;
+    }
+  }
+
+  .hero__content {
+    .hero__title {
+      @include heading-1;
+      width: 470px;
+    }
+
+    .hero__text {
+      margin-top: 20px;
+      color: #665f73;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .hero__btn {
+      @include flexCenter;
+      justify-content: flex-start;
+      margin-top: 40px;
+      padding-bottom: 158px;
+
+      .btn {
+        @include button;
+      }
+
+      .hero__button-link {
+        @include flexCenter;
+
+        img {
+          display: inline-block;
+          margin-left: 8px;
+        }
+      }
+
+      .btn__primary {
+        color: #201830;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1.7;
+        margin-left: 28px;
+      }
     }
   }
 }

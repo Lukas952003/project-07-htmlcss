@@ -23,7 +23,6 @@ li {
 .header {
   padding-top: 42px;
   background-color: #fff8f3;
-  height: 100vh;
 }
 .header .header__list,
 .header .header__button,
@@ -60,7 +59,8 @@ li {
 }
 
 .hero .hero__left,
-.hero .hero__right {
+.hero .hero__right,
+.hero .hero__content {
   position: relative;
   margin-top: 121px;
 }
@@ -75,7 +75,6 @@ li {
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
 }
 .hero .hero__listener-img {
   margin-left: -20px;
@@ -111,6 +110,9 @@ li {
   color: #fff;
   font-size: 1.2rem;
 }
+.hero .hero__right {
+  position: relative;
+}
 .hero .hero__right .img-decor-02 {
   margin-top: 50%;
 }
@@ -118,6 +120,9 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 0;
   gap: 18px;
   justify-content: flex-start;
 }
@@ -125,10 +130,83 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 30%;
   background-color: #ff9051;
   width: 82px;
   height: 82px;
   border-radius: 50%;
+}
+.hero .hero__right strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.hero .hero__right p {
+  margin-top: 4px;
+  color: #ffefe7;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.hero .hero__right .hero__right-decor-line-1 {
+  position: absolute;
+  top: 8%;
+  left: 20%;
+}
+.hero .hero__right .hero__right-decor-line-2 {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+.hero .hero__content .hero__title {
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  width: 470px;
+}
+.hero .hero__content .hero__text {
+  margin-top: 20px;
+  color: #665f73;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.hero .hero__content .hero__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 40px;
+  padding-bottom: 158px;
+}
+.hero .hero__content .hero__btn .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 157px;
+  height: 64px;
+  border-radius: 8px;
+  background: #936cdd;
+}
+.hero .hero__content .hero__btn .hero__button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero__content .hero__btn .hero__button-link img {
+  display: inline-block;
+  margin-left: 8px;
+}
+.hero .hero__content .hero__btn .btn__primary {
+  color: #201830;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.7;
+  margin-left: 28px;
 }
 
 /*# sourceMappingURL=style.css.map */
