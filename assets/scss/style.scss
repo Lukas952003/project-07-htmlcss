@@ -16,7 +16,7 @@ body {
 // Variable
 $primaryColor: #936cdd;
 $secondaryColor: #fff8f3;
-$thirdCorlor: #ff9051;
+$thirdColor: #ff9051;
 
 // Common
 a,
@@ -96,6 +96,16 @@ li {
   align-items: center;
 }
 
+// Mixins hover Button
+@mixin hoverButton {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $thirdColor;
+    transform: scale(1.1);
+  }
+}
+
 // main CSS
 .header {
   padding-top: 42px;
@@ -115,6 +125,12 @@ li {
     gap: 48px;
     a {
       color: #665f73;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        text-shadow: 1px 0 0px #000000;
+        text-decoration: underline;
+      }
     }
   }
 
@@ -124,6 +140,16 @@ li {
     @include flexCenter;
     border-radius: 6px;
     background: #201830;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $thirdColor;
+    }
+
+    &:hover .header__button-link {
+      color: $secondaryColor;
+      text-decoration: underline;
+    }
   }
 
   .header__button-login {
@@ -214,7 +240,7 @@ li {
       position: absolute;
       top: 0;
       right: 30%;
-      background-color: $thirdCorlor;
+      background-color: $thirdColor;
       width: 82px;
       height: 82px;
       border-radius: 50%;
@@ -280,6 +306,7 @@ li {
 
       .btn {
         @include button;
+        @include hoverButton;
       }
 
       .hero__button-link {
@@ -299,5 +326,91 @@ li {
         margin-left: 28px;
       }
     }
+  }
+}
+
+// director
+.director {
+  margin-top: 205px;
+
+  .director__title {
+    @include heading-2;
+    position: relative;
+
+    width: 470px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 73%;
+      right: 14%;
+      z-index: -1;
+      width: 236px;
+      height: 30px;
+      background-image: url(../img/hero-line.svg);
+      background-size: cover;
+      // background-repeat: no-repeat;
+    }
+  }
+
+  .director__text {
+    margin-top: 18px;
+    @include desc;
+  }
+
+  .director__btn {
+    margin-top: 38px;
+    @include button;
+    @include flexCenter;
+    gap: 8px;
+    @include hoverButton;
+  }
+
+  .director-icon {
+    position: relative;
+  }
+
+  .director-icon__decor-1 {
+    position: absolute;
+    top: 200px;
+    left: 299px;
+    width: 126px;
+    height: 126px;
+  }
+
+  .director-icon__decor-2 {
+    position: absolute;
+    top: -60px;
+    left: 315px;
+    width: 148px;
+    height: 148px;
+    object-fit: contain;
+  }
+
+  .director-icon__decor-3 {
+    position: absolute;
+    left: 514px;
+    top: 150px;
+    width: 138px;
+    height: 138px;
+    object-fit: contain;
+  }
+
+  .director-icon__decor-4 {
+    position: absolute;
+    left: 130px;
+    top: 100px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .director-icon__decor-5 {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
   }
 }

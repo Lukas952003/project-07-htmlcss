@@ -40,6 +40,11 @@ li {
 }
 .header .header__list a {
   color: #665f73;
+  transition: all 0.25s ease-in-out;
+}
+.header .header__list a:hover {
+  text-shadow: 1px 0 0px #000000;
+  text-decoration: underline;
 }
 .header .header__button-signup {
   width: 116px;
@@ -49,6 +54,14 @@ li {
   align-items: center;
   border-radius: 6px;
   background: #201830;
+  transition: all 0.3s ease-in-out;
+}
+.header .header__button-signup:hover {
+  background-color: #ff9051;
+}
+.header .header__button-signup:hover .header__button-link {
+  color: #fff8f3;
+  text-decoration: underline;
 }
 .header .header__button-login {
   margin-right: 28px;
@@ -200,6 +213,11 @@ li {
   height: 64px;
   border-radius: 8px;
   background: #936cdd;
+  transition: all 0.3s ease-in-out;
+}
+.hero .hero__content .hero__btn .btn:hover {
+  background-color: #ff9051;
+  transform: scale(1.1);
 }
 .hero .hero__content .hero__btn .hero__button-link {
   display: flex;
@@ -216,6 +234,96 @@ li {
   font-weight: 600;
   line-height: 1.7;
   margin-left: 28px;
+}
+
+.director {
+  margin-top: 205px;
+}
+.director .director__title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+  width: 470px;
+}
+.director .director__title::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 73%;
+  right: 14%;
+  z-index: -1;
+  width: 236px;
+  height: 30px;
+  background-image: url(../img/hero-line.svg);
+  background-size: cover;
+}
+.director .director__text {
+  margin-top: 18px;
+  color: #665f73;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.director .director__btn {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 157px;
+  height: 64px;
+  border-radius: 8px;
+  background: #936cdd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.director .director__btn:hover {
+  background-color: #ff9051;
+  transform: scale(1.1);
+}
+.director .director-icon {
+  position: relative;
+}
+.director .director-icon__decor-1 {
+  position: absolute;
+  top: 200px;
+  left: 299px;
+  width: 126px;
+  height: 126px;
+}
+.director .director-icon__decor-2 {
+  position: absolute;
+  top: -60px;
+  left: 315px;
+  width: 148px;
+  height: 148px;
+  object-fit: contain;
+}
+.director .director-icon__decor-3 {
+  position: absolute;
+  left: 514px;
+  top: 150px;
+  width: 138px;
+  height: 138px;
+  object-fit: contain;
+}
+.director .director-icon__decor-4 {
+  position: absolute;
+  left: 130px;
+  top: 100px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.director .director-icon__decor-5 {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=style.css.map */
