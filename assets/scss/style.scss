@@ -420,6 +420,7 @@ li {
 .category {
   position: relative;
   margin-top: 160px;
+  padding-bottom: 160px;
 
   .category__title {
     @include heading-2;
@@ -562,9 +563,78 @@ li {
     .btn {
       margin-top: 55px;
       @include button;
+      @include hoverButton;
+
       background-color: #201830;
       color: #fff;
+    }
+  }
+}
+
+// Popular
+.popular {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #fff8f3;
+  .popular__heading {
+    h2 {
+      @include heading-2;
+      margin-bottom: 84px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        position: absolute;
+        right: 50px;
+        top: 40px;
+        content: "";
+        background-image: url(../img/hero-line.svg);
+        width: 163px;
+        height: 20px;
+        background-size: cover;
+        z-index: -1;
+      }
+    }
+  }
+  .popular__button {
+    .btn {
+      @include button;
       @include hoverButton;
+    }
+  }
+
+  .popular__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    .popular__time {
+      color: #fd6f1f;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    h3 {
+      @include heading-3;
+      width: 270px;
+      margin-top: 6px;
+    }
+
+    .popular__desc-bottom {
+      margin-top: 18px;
+      @include desc;
+    }
+
+    .popular__button-listen {
+      margin-top: 11px;
+      @include flexCenter;
+      justify-content: start;
+      gap: 6px;
+      a {
+        color: $primaryColor;
+      }
     }
   }
 }
