@@ -11,6 +11,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Plus Jakarta Sans", sans-serif;
+  // background-image: url("https://indieground.net/wp-content/uploads/2023/03/Freebie-GradientTextures-Preview-04.jpg");
+  // background-attachment: fixed;
 }
 
 // Variable
@@ -635,6 +637,93 @@ li {
       a {
         color: $primaryColor;
       }
+    }
+  }
+
+  .popular__dot-list {
+    @include flexCenter;
+    gap: 10px;
+    margin-top: 55px;
+  }
+
+  .popular__dot {
+    width: 8px;
+    height: 8px;
+    background-color: #d8d5de;
+    border-radius: 50%;
+  }
+
+  .popular__dot--active {
+    scale: 1.5;
+    background-color: $primaryColor;
+  }
+}
+
+// Saying
+.saying {
+  padding-top: 168px;
+  .saying__image {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .saying__img-1 {
+      width: 270px;
+      height: 284px;
+    }
+
+    .saying__img-2 {
+      width: 370px;
+      height: 444px;
+      margin-left: -70px;
+      z-index: -1;
+    }
+  }
+
+  .saying__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      @include heading-2;
+      width: 470px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: -50px;
+        content: "";
+        background-image: url(../img/say-decor.svg);
+        width: 43px;
+        height: 35px;
+      }
+
+      &::after {
+        position: absolute;
+        top: 40px;
+        right: 100px;
+        content: "";
+        background-image: url(../img/say-decor-2.png);
+        width: 182px;
+        height: 20px;
+        background-size: 100% 100%; /* Kéo giãn chính xác theo chiều rộng và cao */
+        z-index: -1;
+      }
+    }
+
+    .saying__desc {
+      @include desc;
+      width: 470px;
+      margin-top: 38px;
+    }
+
+    .saying__name {
+      margin-top: 18px;
+      color: #aba6b5;
+      font-size: 1.4rem;
+      font-weight: 400;
     }
   }
 }
