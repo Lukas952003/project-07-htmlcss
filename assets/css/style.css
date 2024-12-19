@@ -326,4 +326,109 @@ li {
   object-fit: contain;
 }
 
+.category {
+  position: relative;
+  margin-top: 160px;
+}
+.category .category__title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  position: relative;
+}
+.category .category__title::before {
+  position: absolute;
+  right: 35%;
+  top: 30px;
+  content: "";
+  background-image: url(../img/hero-line.svg);
+  width: 193px;
+  height: 23px;
+  background-size: cover;
+  z-index: -1;
+}
+.category .category__text {
+  color: #665f73;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-top: 18px;
+  text-align: center;
+  width: 470px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+.category .card__list {
+  display: flex;
+  gap: 30px;
+  height: 600px;
+}
+.category .card__list .card__item {
+  position: relative;
+}
+.category .card__list .card__item img {
+  border-radius: 8px;
+}
+.category .card__list .card__item-2,
+.category .card__list .card__item-6 {
+  flex-grow: 1.5;
+}
+.category .card__list .card__item-2 .card__item-img,
+.category .card__list .card__item-6 .card__item-img {
+  width: 100%;
+  height: 285px;
+  background-size: cover;
+}
+.category .card__group {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.category .card__item-container {
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 16px 24px;
+  width: 100%;
+}
+.category .card__item-container p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.category .card__item-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  gap: 6px;
+  margin-bottom: 7px;
+}
+.category .card__item-name h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.category .category__button .btn {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 157px;
+  height: 64px;
+  border-radius: 8px;
+  background: #936cdd;
+  background-color: #201830;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.category .category__button .btn:hover {
+  background-color: #ff9051;
+  transform: scale(1.1);
+}
+
 /*# sourceMappingURL=style.css.map */
