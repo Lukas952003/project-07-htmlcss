@@ -592,4 +592,75 @@ li {
   font-weight: 400;
 }
 
+.sub {
+  position: relative;
+  background-color: #2e142f; /* Màu nền giống như trong ảnh */
+  color: #fff; /* Màu chữ trắng */
+  padding: 100px;
+}
+.sub h2 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.sub p {
+  color: #665f73;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  width: 470px;
+  color: #aba6b5;
+}
+.sub .sub__form {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.sub input {
+  width: 370px;
+  height: 64px;
+  border-radius: 8px;
+  background: #2b213f;
+  border-color: transparent;
+  padding: 18px 28px;
+  caret-color: #936cdd;
+  color: #fff;
+}
+.sub input:placeholder-shown {
+  border-color: #936cdd;
+}
+.sub button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 157px;
+  height: 64px;
+  border-radius: 8px;
+  background: #936cdd;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-color: none;
+}
+.sub button:hover {
+  background-color: #ff9051;
+  transform: scale(1.1);
+}
+.sub .sub__decor-1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
+.sub .sub__decor-2 {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+.sub .sub__decor-3 {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

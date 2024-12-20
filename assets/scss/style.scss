@@ -727,3 +727,67 @@ li {
     }
   }
 }
+
+// Subscribe
+.sub {
+  position: relative;
+  // padding: 50px 0;
+  background-color: #2e142f; /* Màu nền giống như trong ảnh */
+  color: #fff; /* Màu chữ trắng */
+  padding: 100px;
+
+  h2 {
+    @include heading-2;
+  }
+
+  p {
+    @include desc;
+    width: 470px;
+    color: #aba6b5;
+  }
+
+  .sub__form {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  input {
+    width: 370px;
+    height: 64px;
+    border-radius: 8px;
+    background: #2b213f;
+    border-color: transparent;
+    padding: 18px 28px;
+    caret-color: #936cdd;
+    color: #fff;
+
+    &:placeholder-shown {
+      border-color: $primaryColor;
+    }
+  }
+
+  button {
+    all: unset;
+    @include button;
+    @include hoverButton;
+    cursor: pointer;
+    border-color: none;
+  }
+
+  .sub__decor-1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+  }
+  .sub__decor-2 {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+  .sub__decor-3 {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+  }
+}
