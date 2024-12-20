@@ -730,6 +730,7 @@ li {
 
 // Subscribe
 .sub {
+  margin-top: 160px;
   position: relative;
   // padding: 50px 0;
   background-color: #2e142f; /* Màu nền giống như trong ảnh */
@@ -789,5 +790,74 @@ li {
     position: absolute;
     top: 50%;
     right: 20px;
+  }
+}
+
+// Footer
+.footer {
+  padding-top: 104px;
+  padding-bottom: 38px;
+  background-color: $secondaryColor;
+
+  .footer__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .footer__item:nth-child(2) {
+    margin-left: 116px;
+  }
+  p {
+    @include desc;
+    width: 270px;
+    margin-top: 14px;
+  }
+
+  .footer__social-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 18px;
+  }
+
+  .footer__social {
+    @include flexCenter;
+    width: 36px;
+    height: 36px;
+    background-color: #37162b;
+    border-radius: 50%;
+    @include hoverButton;
+  }
+
+  .footer__social-in {
+    background-color: $primaryColor;
+  }
+
+  ul li:first-child {
+    color: #201830;
+    @include heading-3;
+    margin-bottom: 24px;
+  }
+
+  li:not(:first-child) a {
+    display: inline-block;
+    @include desc;
+    margin-bottom: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  li:hover a {
+    transform: translateX(15px);
+    font-weight: bold;
+    text-decoration: 2px underline $primaryColor;
+    color: $primaryColor;
+  }
+
+  .footer-icon {
+    img {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+      object-fit: cover;
+    }
   }
 }
