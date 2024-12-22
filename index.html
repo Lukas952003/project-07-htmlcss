@@ -103,13 +103,15 @@
     <link rel="stylesheet" href="./assets/css/grid.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="./assets/css/resonsive.css" />
   </head>
   <body>
     <header>
       <div class="header">
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col col-12">
               <div class="header__inner">
                 <div class="logo">
                   <img
@@ -132,12 +134,56 @@
                     <a href="#!" class="header__button-link">Sign up</a>
                   </div>
                 </div>
+
+                <div class="header__menu-mobile">
+                  <label class="header__menu-mobile-icon" for="checkbox">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                      fill="currentColor"
+                      class="header__icon-img"
+                    >
+                      <path
+                        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                      />
+                    </svg>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Menu drawer -->
+              <div class="header__menu-drawer">
+                <input type="checkbox" name="checkbox" id="checkbox" hidden />
+                <label for="checkbox" class="header__overlay"></label>
+                <div class="header__drawer">
+                  <div class="logo">
+                    <img
+                      src="./assets/img/Logo.svg"
+                      alt="Logo"
+                      class="header__logo"
+                    />
+                  </div>
+                  <ul class="header__list">
+                    <li class="header__item"><a href="#!">Episodes</a></li>
+                    <li class="header__item"><a href="#!">Trending</a></li>
+                    <li class="header__item"><a href="#!">Category</a></li>
+                    <li class="header__item"><a href="#!">Blog</a></li>
+                  </ul>
+                  <div class="header__button">
+                    <div class="header__button-login">
+                      <a href="#!" class="header__button-link">Log in</a>
+                    </div>
+                    <div class="header__button-signup">
+                      <a href="#!" class="header__button-link">Sign up</a>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- Hero -->
               <section class="hero">
                 <div class="container">
                   <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-6">
                       <div class="hero__left">
                         <img
                           src="./assets/img/hero-img-01.png"
@@ -181,7 +227,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-6">
                       <div class="hero__right">
                         <img
                           src="./assets/img/hero-img-02.png"
@@ -221,7 +267,7 @@
                         />
                       </div>
                     </div>
-                    <div class="col-5 offset-lg-1">
+                    <div class="col-lg-5 offset-lg-1 col-12">
                       <div class="hero__content">
                         <h1 class="hero__title">
                           A new era of podcasting for you
@@ -251,8 +297,8 @@
       </div>
     </header>
     <main>
-      <!--  directortories -->
-      <section class="director">
+      <!--  directortorie -->
+      <section class="director" style="display: none">
         <div class="container">
           <div class="row">
             <div class="col-lg-5">
@@ -319,7 +365,7 @@
       </section>
 
       <!-- Categery -->
-      <section class="category">
+      <section class="category" style="display: none">
         <div class="container">
           <!-- heading -->
           <div class="row">
@@ -455,7 +501,7 @@
       </section>
 
       <!-- popular -->
-      <section class="popular">
+      <section class="popular" style="display: none">
         <div class="container">
           <!-- Heading -->
           <div class="row">
@@ -618,7 +664,7 @@
       </section>
 
       <!-- Saying -->
-      <section class="saying">
+      <section class="saying" style="display: none">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
@@ -652,7 +698,7 @@
       </section>
 
       <!-- subscribe -->
-      <section class="sub">
+      <section class="sub" style="display: none">
         <div class="container">
           <div class="row">
             <div class="col-lg-4 offset-lg-1">
@@ -737,7 +783,7 @@
       </section>
 
       <!-- Footer -->
-      <footer class="footer">
+      <footer class="footer" style="display: none">
         <div class="container">
           <div class="row">
             <div class="col">
