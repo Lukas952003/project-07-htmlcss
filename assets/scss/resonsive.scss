@@ -1,11 +1,35 @@
-@media screen and (min-width: 991.98px) {
+// PC
+@media screen and (min-width: 992px) {
   .header__menu-mobile,
   .header__drawer {
     display: none;
   }
 }
 
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .header__menu-mobile,
+  .header__drawer {
+    display: none;
+  }
+}
+
+// Mobile
 @media screen and (max-width: 767.98px) {
+  @mixin heading-2-mobile {
+    color: #201830;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  @mixin desc-mobile {
+    color: #665f73;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
   .header {
     .header__list,
     .header__button {
@@ -145,6 +169,63 @@
           background-repeat: no-repeat;
           top: 70px;
         }
+      }
+    }
+  }
+
+  //   Directory
+  .director {
+    position: relative;
+    background: #fdfdfd;
+    .director__title {
+      @include heading-2-mobile;
+      width: 339px;
+
+      &::before {
+        top: 85%;
+        right: 60%;
+        width: 134px;
+        height: 28px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .director__text {
+      @include desc-mobile;
+      width: 339px;
+    }
+
+    .director-content {
+      position: absolute;
+      top: 250px;
+    }
+
+    .director-icon {
+      position: absolute;
+      top: -100px;
+      left: 35px;
+      margin-top: 0;
+      margin-left: -150px;
+
+      img {
+        scale: 0.7;
+      }
+      .director-icon__decor-1 {
+        left: 225px;
+      }
+
+      .director-icon__decor-2 {
+        left: 220px;
+      }
+
+      .director-icon__decor-3 {
+        left: 385px;
+        top: 120px;
+      }
+
+      .director-icon__decor-5 {
+        right: -510px;
       }
     }
   }
