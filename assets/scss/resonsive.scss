@@ -226,7 +226,7 @@
       }
 
       .director-icon__decor-3 {
-        left: 385px;
+        left: 355px;
         top: 120px;
       }
 
@@ -239,6 +239,7 @@
   //   Category
   .category {
     margin-top: 600px;
+    padding-bottom: 80px;
 
     .category__title {
       @include heading-2-mobile;
@@ -285,6 +286,13 @@
         @include heading-2-mobile;
         width: 339px;
         margin-bottom: 0;
+
+        &::before {
+          right: 206px;
+          top: 60px;
+          width: 136px;
+          height: 17px;
+        }
       }
     }
 
