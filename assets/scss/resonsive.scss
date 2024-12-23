@@ -30,6 +30,12 @@
     line-height: 1.7;
   }
 
+  @mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .header {
     .header__list,
     .header__button {
@@ -260,7 +266,63 @@
       justify-content: center;
       align-items: center;
     }
+
+    .category__button {
+      @include flexCenter;
+      margin-top: 1250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
-  //
+  //Popular
+  .popular {
+    padding-bottom: 170px;
+    position: relative;
+    .popular__heading {
+      margin-bottom: 38px;
+      h2 {
+        @include heading-2-mobile;
+        width: 339px;
+        margin-bottom: 0;
+      }
+    }
+
+    .popular__time,
+    .popular__desc-bottom,
+    .popular__button-listen {
+      font-size: 1rem;
+    }
+
+    .popular__info {
+      h3 {
+        font-size: 1.2rem;
+        width: 160px;
+      }
+    }
+
+    .popular__image {
+      img {
+        width: 160px;
+      }
+    }
+    .popular__time {
+      font-size: 1rem;
+    }
+
+    /* Ẩn các .col-lg-3 từ phần tử thứ 3 trở đi, trừ khi nó có .col-6 */
+    .row > .col-lg-3:nth-of-type(n + 1):not(.col-6) {
+      display: none;
+    }
+
+    .popular__dot-list {
+      margin-top: -5px;
+    }
+
+    .popular__button {
+      position: absolute;
+      bottom: 70px;
+      left: 8%;
+    }
+  }
 }
