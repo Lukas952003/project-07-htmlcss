@@ -229,4 +229,38 @@
       }
     }
   }
+
+  //   Category
+  .category {
+    margin-top: 600px;
+
+    .category__title {
+      @include heading-2-mobile;
+      width: 234px;
+      margin: 0 auto;
+
+      &::before {
+        width: 128px;
+        height: 23px;
+        right: -5%;
+        top: 20px;
+        transform: rotate(-8deg);
+      }
+    }
+
+    .category__text {
+      @include desc-mobile;
+      width: 339px;
+    }
+
+    .card__list,
+    .card__group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  //
 }
