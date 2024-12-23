@@ -324,13 +324,57 @@
     }
 
     .popular__dot-list {
-      margin-top: -5px;
+      margin-top: 30px;
     }
 
     .popular__button {
       position: absolute;
       bottom: 70px;
       left: 8%;
+    }
+  }
+
+  //   SAying
+  .saying {
+    .col-lg-5 {
+      order: 1; /* Đặt col-lg-5 đứng trước */
+    }
+
+    .col-lg-6 {
+      order: 2; /* Đặt col-lg-6 đứng sau */
+    }
+
+    .saying__image {
+      margin-top: 30px;
+      @include flexCenter;
+      .saying__img-1 {
+        width: 160px;
+        height: 168px;
+      }
+
+      .saying__img-2 {
+        width: 218px;
+        height: 262px;
+      }
+    }
+
+    .saying__content {
+      h2 {
+        @include heading-2-mobile;
+        width: 339px;
+
+        &::after {
+          top: 30px;
+          right: 110px;
+          width: 120px;
+          height: 20px;
+        }
+      }
+
+      .saying__desc {
+        @include desc-mobile;
+        width: 339px;
+      }
     }
   }
 }
