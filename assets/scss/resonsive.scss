@@ -377,4 +377,47 @@
       }
     }
   }
+  //   Subcribes
+  .sub {
+    padding: 50px 18px;
+
+    h2 {
+      @include heading-2-mobile;
+      color: #fff;
+      width: 339px;
+    }
+
+    .sub__txt {
+      margin-top: 12px;
+      @include desc-mobile;
+      width: 339px;
+    }
+
+    .sub__form {
+      margin-top: 38px;
+      flex-direction: column;
+      margin-left: -10px;
+    }
+
+    .sub__decor-1 {
+      bottom: 26px;
+      right: 33px;
+    }
+  }
+
+  //   Footer
+  .footer {
+    .footer__list {
+      margin-top: -70px;
+      grid-template-columns: 1fr;
+
+      .footer__item:nth-child(2n) {
+        margin-left: 0;
+      }
+
+      .footer__item {
+        margin-top: 38px;
+      }
+    }
+  }
 }
